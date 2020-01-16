@@ -18,6 +18,7 @@ steps:
   inputs:
     version: 3.0.x
     performMultiLevelLookup: true
+- script: dotnet restore
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
