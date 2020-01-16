@@ -17,7 +17,12 @@ steps:
   displayName: 'Install .NET Core SDK'
   inputs:
     version: 3.0.x
-    performMultiLevelLookup: false
+    performMultiLevelLookup: true
+    
+- task: UseDotNet@2
+  inputs:
+     version: '2.2.x'
+     packageType: runtime
     
 - task: DotNetCoreCLI@2
   inputs:
