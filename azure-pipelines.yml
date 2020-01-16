@@ -18,6 +18,11 @@ steps:
   inputs:
     version: 3.0.x
     performMultiLevelLookup: true
+   
+- task: NuGetCommand@2
+  inputs:
+    command: pack
+    packagesToPack: '**/*.csproj'
     
 - task: DotNetCoreCLI@2
   inputs:
